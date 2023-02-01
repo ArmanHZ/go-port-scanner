@@ -25,6 +25,7 @@ go run gps.go
 # TODO
 - Add port range scans
 - Clean the code and make it more readable (currently looks like a rushed job (which it was))
+- Add pre-built Linux and Windows binaries
 - Research on how to improve the performance more. (Maybe apply some of them OOP patterns?)
 - Add UDP maybe?
 - Colors?
