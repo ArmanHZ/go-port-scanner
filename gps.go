@@ -58,16 +58,12 @@ func initArrays(threads int, ports []int) [][]int {
 	padding := 0
 
 	arrays := make([][]int, threads)
-	for i := range arrays {
-		arrays[i] = make([]int, chunkSize)
-	}
 
 	for i := 0; i < threads; i++ {
-		for j := 0; j < chunkSize; j++ {
-			arrays[i][j] = ports[j+padding]
-		}
+		arrays[i] = ports[padding : padding+chunkSize]
 		padding += chunkSize
 	}
+
 	return arrays
 }
 
